@@ -1,0 +1,5 @@
+The number of players is: 2
+Ryan
+12
+Nick
+11
