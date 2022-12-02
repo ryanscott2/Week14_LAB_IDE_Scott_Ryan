@@ -40,25 +40,35 @@ def numcalc():
     for (x, y) in zip(lines1, lines2):
         z = int(x)*int(y)
         scalar_product = int(scalar_product) + int(z)
-    print(scalar_product)
+    print(f'The product is: {scalar_product}\n')
 
 
+def clearfile():
+    with open('numbers1.txt', 'r+') as f1:
+        f1.truncate(0)
+    with open('numbers2.txt', 'r+') as f2:
+        f2.truncate(0)
+    print('Numbers cleared')
 
 def menu():
     control = '0'
-    while control != '3'
+    while control != '4':
         print('1. Enter numbers.')
         print('2. Calculate the product.')
-        print('3. Exit program')
+        print('3. Clear numbers')
+        print('4. Exit the program.')
         control = input('Enter your choice: ')
+        print()
         if control == '1':
             numinput()
         elif control == '2':
             numcalc()
         elif control == '3':
-            print('Exiting program.')
+            clearfile()
+        elif control == '4':
+            print('Exiting the program')
         else:
-            print('Error: please enter 1-3')
+            print('Error: please enter 1-4')
 
 menu()
 
