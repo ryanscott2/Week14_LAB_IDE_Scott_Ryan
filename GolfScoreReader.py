@@ -8,12 +8,10 @@
 # Output:
 # Additional Comments:
 
-lines = []
 header = 'The number of players'
 def scorereader():
     with open('golf.txt', 'r') as f:
        lines = f.readlines()
-       i = 0
        print(lines)
        for line in lines:
            if line.find(header) != -1:

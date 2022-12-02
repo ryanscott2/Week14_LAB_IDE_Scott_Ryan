@@ -23,11 +23,6 @@ def numinput():
             f2.write(usernum2)
             f2.write('\n')
 
-    if num1 >= num2:
-        length = int(num1)
-    else:
-        length = int(num2)
-
 
 def numcalc():
     with open('numbers1.txt', 'r') as f1:
