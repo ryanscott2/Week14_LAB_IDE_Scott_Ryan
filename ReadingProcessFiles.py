@@ -22,6 +22,7 @@ def numinput():
             usernum2 = input(f'Enter number {i2+1} of {num2}: ')
             f2.write(usernum2)
             f2.write('\n')
+    print()
 
 
 def numcalc():
@@ -48,7 +49,7 @@ def clearfile():
         f1.truncate(0)
     with open('numbers2.txt', 'r+') as f2:
         f2.truncate(0)
-    print('Numbers cleared')
+    print('Numbers cleared\n')
 
 def menu():
     control = '0'
@@ -56,7 +57,7 @@ def menu():
         print('1. Enter numbers.')
         print('2. Calculate the product.')
         print('3. Clear numbers')
-        print('4. Exit the program.')
+        print('4. Exit the program.\n')
         control = input('Enter your choice: ')
         print()
         if control == '1':
