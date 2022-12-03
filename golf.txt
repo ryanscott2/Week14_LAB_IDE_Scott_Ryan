@@ -3,3 +3,6 @@ Ryan
 12
 Nick
 11
+The number of players is: 1
+Ryan
+1

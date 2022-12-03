@@ -17,22 +17,37 @@
 # Additional Comments: When a number is requested, only input an integer with no whitespace or the program will break.
 # Numbers mut be input before the calculations can be done.
 
-# FIXME: isadigit check after inputs to prevent errors?
+
 def numinput():
     num1 = input('Please enter the amount of numbers you will store in file 1: ')
-    with open('numbers1.txt', 'a') as f1:
-        for i1 in range(0, int(num1)):
-            usernum1 = input(f'Enter number {i1+1} of {num1}: ')
-            f1.write(usernum1)
-            f1.write('\n')
+    if num1.isdigit():
+        with open('numbers1.txt', 'a') as f1:
+            for i1 in range(0, int(num1)):
+                usernum1 = input(f'Enter number {i1+1} of {num1}: ')
+                if usernum1.isdigit():
+                    f1.write(usernum1)
+                    f1.write('\n')
+                else:
+                    print('Please enter a number\n')
+
+
+    elif num1.isdigit() == False:
+        print('\nPlease enter a number\n')
 
     num2 = input('Please enter the amount of numbers you will store in file 2: ')
-    with open('numbers2.txt', 'a') as f2:
-        for i2 in range(0,int(num2)):
-            usernum2 = input(f'Enter number {i2+1} of {num2}: ')
-            f2.write(usernum2)
-            f2.write('\n')
-    print('Numbers stored\n')
+
+    if num2.isdigit():
+        with open('numbers2.txt', 'a') as f2:
+            for i2 in range(0,int(num2)):
+                usernum2 = input(f'Enter number {i2+1} of {num2}: ')
+                if usernum2.isdigit():
+                    f2.write(usernum2)
+                    f2.write('\n')
+                else:
+                    print('Please enter a number')
+        print('Numbers stored\n')
+    elif num1.isdigit() == False:
+        print('\nPlease enter a number\n')
 
 
 def numcalc():

@@ -9,16 +9,19 @@
 # Output: This program outputs the names and scores to "golf.txt"
 # Additional Comments:
 
-# FIXME: add isadigit checks to prevent crashes?
+
 def scoreinput():
     playernum = input('Enter the number of players: ')
-    with open ('golf.txt', 'a') as f:
-        f.write(f"The number of players is: {playernum}\n")
-        for i in range(0, int(playernum)):
-            name = input(f'Enter the name of player number {i+1}: ')
-            score = input(f'Enter the score of player number {i+1}: ')
-            f.write(f'{name}\n')
-            f.write(f'{score}\n')
+    if playernum.isdigit():
+        with open ('golf.txt', 'a') as f:
+            f.write(f"The number of players is: {playernum}\n")
+            for i in range(0, int(playernum)):
+                name = input(f'Enter the name of player number {i+1}: ')
+                score = input(f'Enter the score of player number {i+1}: ')
+                f.write(f'{name}\n')
+                f.write(f'{score}\n')
+    else:
+        print('Please enter a number.')
 
 
 scoreinput()
