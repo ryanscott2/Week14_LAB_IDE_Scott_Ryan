@@ -29,9 +29,7 @@ def numinput():
                     f1.write('\n')
                 else:
                     print('Please enter a number\n')
-
-
-    elif num1.isdigit() == False:
+    elif not num1.isdigit():
         print('\nPlease enter a number\n')
 
     num2 = input('Please enter the amount of numbers you will store in file 2: ')
@@ -46,7 +44,7 @@ def numinput():
                 else:
                     print('Please enter a number')
         print('Numbers stored\n')
-    elif num1.isdigit() == False:
+    elif not num1.isdigit():
         print('\nPlease enter a number\n')
 
 
