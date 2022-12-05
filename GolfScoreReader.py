@@ -8,10 +8,12 @@
 # Input: This program does not require any input
 # Output: This program outputs the data stored in "golf.txt"
 # Additional Comments: If 'The number of players' is entered as a player name or score it will not print with the
-# appropriate format. If a number is entered in a name it will also cause a formatting issue.
-
+# appropriate format. If a number is entered in a name it will also cause a formatting issue. Scores and names must
+# be entered in "GolfScoreWriter" before this program will be functional.
 
 header = 'The number of players'
+
+
 def scorereader():
     with open('golf.txt', 'r') as f:
         lines = f.readlines()
@@ -22,8 +24,6 @@ def scorereader():
                 print(f'Name: {line}', end='')
             elif any([char.isdigit() for char in line]):
                 print(f'Score: {line}')
-
-
 
 
 scorereader()

@@ -2,7 +2,7 @@
 # Student: Scott, Ryan
 # Instructor: Katherine Tupac
 # Date given to class: 11/28/22
-# Date of Submission:
+# Date of Submission: 12/4/22
 # Description: This program takes a control input to determine the amount of numbers being entered, two lists of
 # numbers as input, and writes them into two separate text files in the "numinput" function. The "numcalc" function
 # reads each line into a separate element of a list. The last element is deleted as it is empty due to the "\n" creating
@@ -74,6 +74,7 @@ def clearfile():
         f2.truncate(0)
     print('Numbers cleared\n')
 
+
 def menu():
     control = '0'
     while control != '4':
@@ -93,6 +94,7 @@ def menu():
             print('Exiting the program')
         else:
             print('Error: please enter 1-4')
+
 
 menu()
 
