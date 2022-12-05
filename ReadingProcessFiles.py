@@ -10,7 +10,8 @@
 # also stops when the end of the shorter list is reached. After each calculation is done the total is added to
 # "scalar_product" which is printed when the iteration is complete. The "clearfile" function deletes all of the content
 # in both files using the truncate command and informs the user that the file has been cleared. Lastly the "menu"
-# function calls the prior functions based on the users input.
+# function calls the prior functions based on the users input. All places that require digits as inputs have a filter to
+# prevent user error from crashing the program.
 # Input: The control numbers to determine the amount of inputs, the inputs for each file, and the menu control inputs.
 # Output: This program outputs the menu and the result stored in "scalar_product." It also outputs "usernum1" and
 # "usernum2" to their respective files each time the loop runs.
@@ -50,10 +51,8 @@ def numinput():
 
 def numcalc():
     with open('numbers1.txt', 'r') as f1:
-
         lines1 = f1.read().split('\n')
     with open('numbers2.txt', 'r') as f2:
-
         lines2 = f2.read().split('\n')
 
     del lines1[-1]
